@@ -1,33 +1,44 @@
 #include <iostream>
-#include <string>
+#include <cmath>
+#include <math.h>
 using namespace std;
 
+//All Function declaration
+void circle();
+void calcArea(double radius);
+
+int main()
+{
+    double diameter;
+    radius = circle();
+    area = calcArea(radius);
+
+    cout << "Diameter of the circle: " << diameter << " units" << endl;
+    cout << "Circumference of the circle: " << circle << " units" << endl;
+    cout << "Area of the circle:" << area << " sq. units" << endl;
+
+    return 0;
+}
 
 
-int main() {
-	int a;
-	int b;
-	char calculate;
+//Calculating circumference of circle whose radius is given
 
-	cout << "input your first number: \n";
-	cin >> a;
-	cout << "input your second number: \n";
-	cin >> b;
-	cout << "+, - or *? \n";
-	cin >> calculate;
+void circle()
+{
+    double radius;
 
-	switch (calculate) {
-	case '+':
-		cout << a << "+" << b << "=" << a + b;
-		break;
-	case '-':
-		cout << a << "-" << b << "=" << a - b;
-		break;
-	case '*':
-		cout << a << "*" << b << "=" << a * b;
-		break;
-	default:
-		cout << "404 unerversal shutdown beep boop \n";
-	}
-	
+    // Inputting radius of circle from user
+    cout << "Enter radius of circle: ";
+    cin >> radius;
+    calcArea(radius); 
+    return;
+}
+
+//Finding area of circle whose radius is given
+void calcArea(double radius)
+{
+    double area;
+    const float M_PI = 3.14;
+    area = 1.0 / 4.0 * M_PI * pow(radius, 2);
+    return;
 }
